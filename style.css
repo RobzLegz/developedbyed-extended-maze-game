@@ -6,6 +6,57 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+#play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.play__container {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+  flex-direction: column;
+}
+
+.play__container--buttons {
+  display: flex;
+  margin-top: 20px;
+}
+
+.play__container--buttons > button {
+  width: 120px;
+  height: 30px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+#yes {
+  background-color: rgb(18, 243, 18);
+  color: white;
+}
+
+#no {
+  background-color: rgb(243, 18, 217);
+  color: white;
+}
+
+.play-pressed {
+    display: none !important;
+}
+
 .description {
   min-height: 20vh;
   display: flex;

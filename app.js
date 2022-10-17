@@ -9,8 +9,16 @@ const uiMessage = document.querySelector(".ui-message");
 const spookyPicture = document.querySelector(".spooky-picture");
 const screamSound = document.querySelector(".scream-sound");
 
+const yesButton = document.getElementById("yes");
+
+const playPopup = document.getElementById("play");
+
 let level = 1;
 let started = false;
+
+yesButton.addEventListener("click", () => {
+  playPopup.classList.add("play-pressed");
+});
 
 const levelCheck = () => {
   if (level === 2) {
@@ -43,11 +51,11 @@ const collisionCheck = (value) => {
 window.addEventListener("mousemove", (e) => {
   let check = e.target.classList.value;
 
-  if(check == "start" && !started){
+  if (check == "start" && !started) {
     started = true;
   }
 
-  if(started){
+  if (started) {
     collisionCheck(check);
   }
 });
