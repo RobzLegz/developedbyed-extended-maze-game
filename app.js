@@ -10,6 +10,7 @@ const spookyPicture = document.querySelector(".spooky-picture");
 const screamSound = document.querySelector(".scream-sound");
 
 let level = 1;
+let started = false;
 
 const levelCheck = () => {
   if (level === 2) {
@@ -29,6 +30,7 @@ const collisionCheck = (value) => {
   if (value === "maze-border") alert("You lost...try again.");
   if (value === "finish") {
     level += 1;
+    started = false;
     levelCheck();
   }
   if (value === "end-game") {
@@ -40,5 +42,12 @@ const collisionCheck = (value) => {
 
 window.addEventListener("mousemove", (e) => {
   let check = e.target.classList.value;
-  collisionCheck(check);
+
+  if(check == "start" && !started){
+    started = true;
+  }
+
+  if(started){
+    collisionCheck(check);
+  }
 });
