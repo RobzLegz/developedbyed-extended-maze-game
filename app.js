@@ -1,11 +1,8 @@
-//svg mazes
 const levelOne = document.querySelector(".level-one");
 const levelTwo = document.querySelector(".level-two");
 const levelThree = document.querySelector(".level-three");
-//UI MESSAGES
 const uiLevel = document.querySelector(".ui-level");
 const uiMessage = document.querySelector(".ui-message");
-//End Game
 const spookyPicture = document.querySelector(".spooky-picture");
 const screamSound = document.querySelector(".scream-sound");
 
